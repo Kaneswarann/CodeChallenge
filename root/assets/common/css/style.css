@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* { 
+    margin: 0;
+    padding: 0;
+} 
+
+main .container{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-around;
+}
+main form {
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+main .parede {
+    margin-bottom: 8px;
+}
+main .altura-largura{
+    display: flex;
+    flex-flow: column wrap;
+}
+main .porta-janela {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+}
+main input {
+    border: 1px solid #ADD8E6;
+}
+main label, p, input {
+    color: #363636;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 4px;
+}
+main .altura-largura input {
+    border-radius: 5px;
+    border: 1px solid #ADD8E6;
+    padding: 7px;
+    font-size: 16px;
+}
+main .inputErro {
+    border: 1px solid red;
+}
+main input:hover {
+    border: 1px solid #4682B4;
+}
+main .porta-janela label:hover {
+    cursor: pointer;
+}
+input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type="checkbox"]:after{
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 15px;
+    color: white;
+    display: none;
+}
+input[type="checkbox"]:checked{
+    background-color: #5bcd3e;
+}
+input[type="checkbox"]:checked:after{
+    display: block;
+}
+main .btn {
+    grid-column: 1/3;
+    text-align: center;
+}
+main .btn input {
+    background: #ADD8E6;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    align-items: center;
+    transition: 400ms;
+    border: none;
+}
+main .btn input:hover{
+    border: 2px solid #4682B4;
+}
+main .erro{
+    font-size: 11px;
+    color: #CD0000;
+    display: flex;
+    flex-flow: wrap;
+}
+form {
+    overflow: hidden;
+    animation: fade 0.2s;
+}
+form .input-block{
+    animation: move 400ms;
+    animation-delay: 150ms;
+    animation-fill-mode: backwards;
+}
+form .btn {
+    animation: move 400ms;
+    animation-delay: 250ms;
+    animation-fill-mode: backwards;
+}
+@keyframes move {
+    from {
+        opacity: 0;
+        transform: translateX(-35%);
+    } to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    } to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+form.validate-error {
+    animation: nono 300ms, fade paused;
+    animation-iteration-count: 2;
+}
+
+
+
+@keyframes nono{
+    0%, 100% {
+        transform: translateX(0)
+    } 35% {
+        transform: translateX(-15%)
+    } 70% {
+        transform: translateX(15%)
+    } 
+}
+
+body {
+    overflow: hidden;
+    background-color: #ADD8E6;
+
+  }
+  .squares li {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.15);
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    animation: up 2s infinite alternate;
+    z-index:-1
+  }
+  
+  @keyframes up {
+    from {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-800px) rotate(960deg);
+    }
+  }

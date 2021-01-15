@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <title>Pintura</title>
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <form id="formulario">
+                    <div class="parede">
+                        <div class="altura-largura">
+                            <label for="lp1">Qual a largura da primeira parede?</label>
+                            <input type="number" id="lp1" step=".01" name="lp" class="input-block">
+                            <p id="error-lp1" class="erro"></p>
+                            <label for="ap1">Qual a altura da primeira parede?</label>
+                            <input type="number" id="ap1" step=".01" name="ap" class="input-block">
+                            <p id="error-ap1" class="erro"></p>
+                        </div>
+                        <div class="porta-janela">
+                            <p>Possui porta?</p>
+                            <input type="checkbox" id="p1" name="porta">
+                            <label for="p1">Sim</label>
+                            <p>Possui janela?</p>
+                            <input type="checkbox" id="j1" name="janela">
+                            <label for="j1">Sim</label>
+                        </div>
+                        <div>
+                            <p id="error-p1" class="erro"></p>
+                            <p id="error-j1" class="erro"></p>
+                        </div>
+                    </div>
+
+                    <div class="parede">
+                        <div class="altura-largura">
+                            <label for="lp2">Qual a largura da segunda parede?</label>
+                            <input type="number" id="lp2" step=".01" name="lp" class="input-block">
+                            <p id="error-lp2" class="erro"></p>
+                            <label for="ap2">Qual a altura da segunda parede?</label>
+                            <input type="number" id="ap2" step=".01" name="ap" class="input-block">
+                            <p id="error-ap2" class="erro"></p>
+                        </div>
+                        <div class="porta-janela">
+                            <p>Possui porta?</p>
+                            <input type="checkbox" id="p2" name="porta">
+                            <label for="p2">Sim</label>
+                            <p>Possui janela?</p>
+                            <input type="checkbox" id="j2" name="janela">
+                            <label for="j2">Sim</label>
+                        </div>
+                        <div>
+                            <p id="error-p2" class="erro"></p>
+                            <p id="error-j2" class="erro"></p>
+                        </div>
+                    </div>
+
+                    <div class="parede">
+                        <div class="altura-largura">
+                            <label for="lp3">Qual a largura da terceira parede?</label>
+                            <input type="number" id="lp3" step=".01" min="0.99" max="15" name="lp" class="input-block">
+                            <p id="error-lp3" class="erro"></p>
+                            <label for="ap3">Qual a altura da terceira parede?</label>
+                            <input type="number" id="ap3" step=".01" min="0.99" max="15" name="ap" class="input-block">
+                            <p id="error-ap3" class="erro"></p>
+                        </div>
+                        <div class="porta-janela">
+                            <p>Possui porta?</p>
+                            <input type="checkbox" id="p3" name="porta">
+                            <label for="p3">Sim</label>
+                            <p>Possui janela?</p>
+                            <input type="checkbox" id="j3" name="janela">
+                            <label for="j3">Sim</label>
+                        </div>
+                        <div>
+                            <p id="error-p3" class="erro"></p>
+                            <p id="error-j3" class="erro"></p>
+                        </div>
+                    </div>
+                    <div class="parede">
+                        <div class="altura-largura">
+                            <label for="lp4">Qual a largura da quarta parede?</label>
+                            <input type="number" id="lp4" step=".01" min="0.99" max="15" name="lp" class="input-block">
+                            <p id="error-lp4" class="erro"></p>
+                            <label for="ap4">Qual a altura da quarta parede?</label>
+                            <input type="number" id="ap4" step=".01" min="0.99" max="15" name="ap" class="input-block">
+                            <p id="error-ap4" class="erro"></p>
+                        </div>
+                        <div class="porta-janela">
+                            <p>Possui porta?</p>
+                            <input type="checkbox" id="p4" name="porta">
+                            <label for="p4">Sim</label>
+                            <p>Possui janela?</p>
+                            <input type="checkbox" id="j4" name="janela">
+                            <label for="j4">Sim</label>
+                        </div>
+                        <div>
+                            <p id="error-p4" class="erro"></p>
+                            <p id="error-j4" class="erro"></p>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <input type="submit" value="Calcular" class="block">
+                    </div>
+                    <p id="resp" class="erro"></p>
+                </form>
+            </div>
+            <ul class="squares">
+                <li></li>
+            </ul>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
