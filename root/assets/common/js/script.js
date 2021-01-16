@@ -121,7 +121,7 @@ function quantTinta(areaParede) {
 
 const ulSquares = document.querySelector("ul.squares");
 
-for (let i = 0; i < 11; i++) {
+for (let i = 0; i < 30; i++) {
     const li = document.createElement("li");
 
     const random = (min, max) => Math.random() * (max - min) + min;
